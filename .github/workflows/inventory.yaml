@@ -10,12 +10,12 @@ jobs:
 
       - name: Create inventory directory
         run: |
-          sudo -u shruti mkdir -p /home/lourde/ansible/
-          sudo chown -R shruti:shruti /home/lourde/ansible
+          sudo -u lourde mkdir -p /home/lourde/ansible/
+          sudo chown -R lourde:lourde /home/lourde/ansible
 
       - name: Generate inventory.yaml
         run: |
-          sudo -u lourde bash -c 'cat > /home/shruti/ansible/inventory.yaml' << 'EOF'
+          sudo -u lourde bash -c 'cat > /home/lourde/ansible/inventory.yaml' << 'EOF'
           ---
           all:
             children:
