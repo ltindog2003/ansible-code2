@@ -14,7 +14,7 @@ jobs:
         run: |
           sudo -u lourde bash -c 'cat > /home/lourde/ansible/ansible.cfg' << 'EOF'
           [defaults]
-          inventory      = /home/lourde/ansible/inventory.yaml
+          inventory     = /home/lourde/ansible/inventory.yaml
           roles_path    = /home/lourde/ansible/roles
           host_key_checking = False
           remote_user = lourde
