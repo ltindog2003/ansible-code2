@@ -10,27 +10,27 @@ jobs:
 
       - name: Create inventory directory
         run: |
-          sudo -u shruti mkdir -p /home/shruti/ansible/
-          sudo chown -R shruti:shruti /home/shruti/ansible
+          sudo -u shruti mkdir -p /home/lourde/ansible/
+          sudo chown -R shruti:shruti /home/lourde/ansible
 
       - name: Generate inventory.yaml
         run: |
-          sudo -u shruti bash -c 'cat > /home/shruti/ansible/inventory.yaml' << 'EOF'
+          sudo -u lourde bash -c 'cat > /home/shruti/ansible/inventory.yaml' << 'EOF'
           ---
           all:
             children:
               webservers:
                 hosts:
                   web01:
-                    ansible_host: 10.128.0.4
-                    ansible_user: shruti
+                    ansible_host: 10.158.0.3 # node1
+                    ansible_user: lourde
                     
 
               databases:
                 hosts:
                   db01:
-                    ansible_host: 10.204.0.2
-                    ansible_user: shruti
+                    ansible_host: 10.190.0.8 # node2
+                    ansible_user: lourde
                     db_version: 14
                    
 
