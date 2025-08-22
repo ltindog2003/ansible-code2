@@ -1,11 +1,11 @@
-name: Run Ansible Playbook for add user
+name: Run Ansible Playbook
 on:
  push:
    branches: [main]
  pull_request:
    branches: [main]
  workflow_dispatch:
-  
+ 
 
 jobs:
   ansible-playbook:
@@ -15,6 +15,6 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Execute Ansible Playbook
-     
-        run: |  
+ 
+        run: |
            ansible-playbook  playbook2-file-lineinfile-blockinfile.yaml -i /home/lourde/ansible/inventory.yaml --become
