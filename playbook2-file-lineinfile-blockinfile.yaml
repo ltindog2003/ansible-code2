@@ -5,7 +5,7 @@
   - name: using file module
     file:
       path: /home/lourde/file2.txt
-      owner: shruti
+      owner: lourde
       mode: 644
       state: touch
 
